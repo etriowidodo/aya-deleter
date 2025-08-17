@@ -1,5 +1,7 @@
 # -*- mode: python ; coding: utf-8 -*-
+from PyInstaller.utils.hooks import collect_data_files
 
+datas = collect_data_files('psutil')
 block_cipher = None
 
 added_files = [
@@ -20,7 +22,8 @@ a = Analysis(
         'time',
         'datetime',
         'tkinter',
-        'collections'
+        'collections',
+        'psutil._psutil_windows',  # Add this line
     ],
     hookspath=[],
     hooksconfig={},
@@ -49,19 +52,19 @@ exe = EXE(
     a.binaries,
     a.zipfiles,
     a.datas,
-    name='AYA_DELETER',  # Changed to match your application name
+    name='AYA_DELETER',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
-    upx=True,  # Enable UPX compression
+    upx=True,
     upx_exclude=[],
     runtime_tmpdir=None,
-    console=False,  # Set to False for GUI application
+    console=False,
     disable_windowed_traceback=False,
     argv_emulation=False,
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon='AYA.ico',  # Make sure this matches your icon file
-    onefile=True,  # Create a single executable file
+    icon='AYA.ico',
+    onefile=True,
 )
